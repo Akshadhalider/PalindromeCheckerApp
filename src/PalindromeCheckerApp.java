@@ -3,35 +3,15 @@ import java.util.Scanner;
 
 public class PalindromeCheckerApp {
 
-
-    public static boolean isPalindrome(String input) {
-        String cleaned = input.replaceAll("[^a-zA-Z0-9]", "").toLowerCase();
-
-        int left = 0;
-        int right = cleaned.length() - 1;
-
-        while (left < right) {
-            if (cleaned.charAt(left) != cleaned.charAt(right)) {
-                return false;
-            }
-            left++;
-            right--;
-        }
-        return true;
-    }
-
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Enter a word or sentence:");
-        String input = scanner.nextLine();
+        System.out.println(" Welcome to the Palindrome Checker Management System");
+        System.out.println(" System  ");
+        System.out.println(" Version : 1.0 ");
+        System.out.println(" System initialized successfully.");
 
-        if (isPalindrome(input)) {
-            System.out.println("It is a palindrome ✅");
-        } else {
-            System.out.println("It is NOT a palindrome ❌");
-        }
 
-        scanner.close();
     }
+
 }
+
