@@ -5,25 +5,25 @@ public class PalindromeCheckerApp {
 
     public static void main(String[] args) {
 
-        String input = "radar";
-        char[] characters = input.toCharArray();
-        int start = 0;
-        int end = characters.length - 1;
+        String input = "noon";
+        Stack<Character> stack = new Stack<>();
+        for (char c : input.toCharArray()) {
+            stack.push(c);
+        }
+
         boolean isPalindrome = true;
-        while (start < end) {
-            if (characters[start] != characters[end]) {
+
+        for (char c : input.toCharArray()) {
+            if (c != stack.pop()) {
                 isPalindrome = false;
                 break;
             }
-            start++;
-            end--;
         }
-        System.out.println("Input String : " + input);
 
         if (isPalindrome) {
-            System.out.println("Result : The string is a Palindrome.");
+            System.out.println(input + " is a palindrome.");
         } else {
-            System.out.println("Result : The string is NOT a Palindrome.");
+            System.out.println(input + " is not a palindrome.");
         }
     }
 }
